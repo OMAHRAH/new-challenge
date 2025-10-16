@@ -32,7 +32,7 @@ h1, h2{
 .flex-item{
     flex: 1 1 100px;
     width: 30%;
-    min-width: 30%px;
+    min-width: 30%;
     max-width: 35%;
     height: 100px;
     background-color: #4e4f50;
