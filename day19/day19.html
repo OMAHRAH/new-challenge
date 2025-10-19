@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 19</title>
+    <link rel="stylesheet" href="day19.css">
+</head>
+<body>
+    <h1 class="visually-hidden">Project: Facebook Login page</h1>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo" aria-hidden="true">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="24" height="24" rx="6" fill="#1877f2"/>
+                    <path d="M15.5 8.5H14c-.6 0-.9.5-.9 1.1V10.5H15.5v2.2H13.1V18h-2.2v-5.3H8.5v-2.2h2.4V9.6C10.9 7.1 12.4 6 14.9 6c.8 0 1.6.1 2.1.2v2.3z" fill="white"/>
+                </svg>
+            </div>
+            <h2>Facebook</h2>
+            <p class="tagline">Connect with friends and the world around you.</p>
+        </div>
+
+        <form class="login-form" action="#" method="post" aria-label="Login form">
+            <label class="visually-hidden" for="email">Email or Phone Number</label>
+            <input id="email" type="text" placeholder="Email or Phone Number" required>
+
+            <div class="pw-row">
+                <label class="visually-hidden" for="password">Password</label>
+                <input id="password" type="password" placeholder="Password" required>
+            </div>
+
+            <div class="controls">
+                <label class="keep">
+                    <input type="checkbox" id="keep" name="keep"> Keep me logged in
+                </label>
+                <button type="submit" class="login-btn">Log In</button>
+            </div>
+        </form>
+
+        <a class="forgot" href="#">Forgotten password?</a>
+        <hr>
+        <button class="create-account">Create New Account</button>
+
+        <p class="foot">Not on Facebook yet? <a href="#">Sign up</a> — it’s free and always will be.</p>
+    </div>
+
+    
+</body>
+</html>

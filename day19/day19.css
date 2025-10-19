@@ -1,0 +1,158 @@
+/* Facebook-like login page styling for Day 19 */
+:root{
+	--fb-blue:#1877f2;
+	--bg:#0b1020; /* dark background */
+	--card:#0f1724; /* dark card */
+	--muted:#9aa4b2;
+	--muted-2:#7f8a98;
+	--danger:#e00909;
+	--surface:#0b1220;
+	--input-border:rgba(255,255,255,0.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	background:radial-gradient(1200px 600px at 10% 10%, rgba(24,39,63,0.25), transparent), var(--bg);
+	color:#e6eef8;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:2rem;
+}
+
+h1{display:none}
+
+.login-container{
+	width:100%;
+	max-width:480px;
+	background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+	padding:2rem;
+	border-radius:12px;
+	box-shadow:0 12px 40px rgba(3,8,20,0.6);
+	text-align:center;
+	border:1px solid rgba(255,255,255,0.03);
+}
+
+.login-header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:12px}
+.login-header .logo{width:56px;height:56px}
+.login-header h2{margin:0;color:var(--fb-blue);font-size:1.6rem}
+.tagline{margin:0;color:var(--muted-2);font-size:0.95rem}
+
+.login-form{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+
+input[type="text"], input[type="password"]{
+	appearance:none;
+	border:1px solid var(--input-border);
+	padding:12px 14px;
+	border-radius:8px;
+	font-size:1rem;
+	background:var(--surface);
+	color:var(--text);
+}
+
+.pw-row{display:flex;align-items:center;gap:8px}
+.pw-row input{flex:1}
+
+.controls{display:flex;align-items:center;gap:10px;justify-content:space-between}
+.keep{color:var(--muted-2);font-size:0.95rem}
+.keep input{margin-right:8px}
+
+.login-btn{
+	background:linear-gradient(180deg,var(--fb-blue),#1558d6);
+	color:white;
+	border:none;
+	padding:10px 14px;
+	border-radius:8px;
+	font-weight:700;
+	cursor:pointer;
+	box-shadow:0 8px 20px rgba(8,32,80,0.45);
+}
+.login-btn:hover{filter:brightness(.98)}
+
+.forgot{display:block;margin:10px 0;color:var(--muted-2);text-decoration:none}
+
+hr{border:none;height:1px;background:rgba(255,255,255,0.03);margin:14px 0}
+
+.create-account{background:linear-gradient(180deg,#2e7d32,#256523);color:white;border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer;width:100%}
+.create-account:hover{opacity:.95}
+
+.foot{margin-top:12px;color:var(--muted-2);font-size:0.95rem}
+
+/* visually hidden helper */
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+/* small screen adjustments */
+@media (max-width:420px){
+	.login-container{padding:16px}
+	.controls{flex-direction:column;align-items:stretch}
+	.login-btn{width:100%}
+}
+
+form{
+	display:flex;
+	flex-direction:column;
+	gap:0.75rem;
+}
+
+input[type="text"], input[type="password"]{
+	appearance:none;
+	border:1px solid #dddfe2;
+	padding:12px 14px;
+	border-radius:6px;
+	font-size:1rem;
+	background:#fff;
+}
+
+input[type="text"]:focus, input[type="password"]:focus{
+	outline:3px solid rgba(24,119,242,0.12);
+	border-color:var(--fb-blue);
+}
+
+button[type="submit"]{
+	background:var(--fb-blue);
+	color:white;
+	border:none;
+	padding:12px;
+	border-radius:6px;
+	font-weight:600;
+	cursor:pointer;
+	box-shadow:0 4px 8px rgba(24,119,242,0.18);
+}
+button[type="submit"]:hover{filter:brightness(.98)}
+
+.login-container a{
+	display:block;
+	margin:12px 0;
+	color:var(--muted);
+	text-decoration:none;
+}
+
+hr{
+	border:none;
+	height:1px;
+	background:#e9ebee;
+	margin:1rem 0;
+}
+
+.create-account{
+	background:linear-gradient(180deg,#42b72a,#36a420);
+	color:white;
+	border:none;
+	padding:10px 14px;
+	border-radius:6px;
+	font-weight:700;
+	cursor:pointer;
+	width:100%;
+}
+
+.create-account:hover{opacity:.95}
+
+/* Small screens: reduce padding */
+@media (max-width:420px){
+	.login-container{padding:1rem}
+	input[type="text"], input[type="password"]{padding:10px}
+}
+
